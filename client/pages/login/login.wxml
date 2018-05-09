@@ -1,0 +1,33 @@
+<!--start.wxml-->
+<import src="../common/head.wxml" />
+<import src="../common/foot.wxml" />
+
+<view class="container">
+    <block >
+      <!-- 用户登录测试 -->
+      <view class="userinfo" bindtap="login">
+        <image
+            class="userinfo-avatar"
+            src="{{logged ? userInfo.avatarUrl : './user-unlogin.png'}}"
+            background-size="cover"
+        ></image>
+        <view>
+            <text class="userinfo-nickname">{{logged ? userInfo.nickName : '用户登录'}}</text>
+            <text class="userinfo-nickname" wx:if="{{logged}}">{{userInfo.lastLoginTime}}</text>
+        </view>
+      </view>
+      <view class="section section_gap">
+        <radio-group class="radio-group" bindchange="radioChange" >
+            <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+                <text>{{item.value}}</text>
+            </radio>
+        </radio-group>
+      </view>
+
+      <view class="btn-area">
+        <navigator url="/pages/info/info" open-type="switchTab" hover-class="navigator-hover">
+          <button type="default">打开主页</button>
+        </navigator>
+      </view>
+    </block>
+</view>

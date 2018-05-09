@@ -1,0 +1,63 @@
+/**start.wxss**/
+page{
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 10pt;
+  line-height: 150%;
+  min-height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.userinfo, .uploader, .tunnel {
+    /*margin-top: 200rpx;*/
+    height: 140rpx;
+    width: 100%;
+    background: #FFF;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-left: none;
+    border-right: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease;
+}
+.userinfo-avatar {
+    width: 100rpx;
+    height: 100rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+}
+.userinfo-nickname {
+    font-size: 32rpx;
+    color: #007AFF;
+}
+.radio-group {
+  margin-top: 10rpx;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.radio {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
+
+

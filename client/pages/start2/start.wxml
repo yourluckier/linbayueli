@@ -1,0 +1,35 @@
+<!--start.wxml-->
+<view class="container">
+    <view class="content">
+      <!-- 用户登录测试 -->
+      <view class="userinfo" bindtap="login">
+          <image
+              class="userinfo-avatar"
+              src="{{logged ? userInfo.avatarUrl : './user-unlogin.png'}}"
+              background-size="cover"
+          ></image>
+          <view>
+              <text class="userinfo-nickname">{{logged ? userInfo.nickName : '用户登录'}}</text>
+              <text class="userinfo-nickname" wx:if="{{logged}}">{{userInfo.lastLoginTime}}</text>
+          </view>
+      </view>
+
+      <view class="page__bd">
+          <view class="section section_gap">
+              <radio-group class="radio-group" bindchange="radioChange" >
+                  <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+                      <text>{{item.value}}</text>
+                  </radio>
+              </radio-group>
+          </view>
+      </view>
+
+      <view class="bd">
+         <view class="confirm-btn" bindtap='goToIndex'>
+          <text >进入主页</text>
+        </view>
+        
+      </view>
+      <text class="copyright">@北京欣利宁医疗器械有限公司</text>
+    </view>
+</view>
